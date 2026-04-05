@@ -1,0 +1,48 @@
+[gd_scene format=4 uid="uid://okhnjxqsl83r"]
+
+[ext_resource type="PackedScene" uid="uid://bkiwo1p6w3hwd" path="res://Scenes/Bordes/bordes.tscn" id="1_y0nqj"]
+[ext_resource type="PackedScene" uid="uid://c14mj56saa14e" path="res://Scenes/contenedor_monedas/contenerdor_monedas.tscn" id="2_kjmo0"]
+[ext_resource type="PackedScene" uid="uid://bpi08breqd4jh" path="res://Scenes/Monedas/moneda.tscn" id="3_l6ynl"]
+[ext_resource type="PackedScene" uid="uid://do2hdtr4x8mag" path="res://Scenes/Personaje/personaje.tscn" id="4_nmr1y"]
+[ext_resource type="TileSet" uid="uid://ci6qlpm0kl3o6" path="res://TileSet/Mazmorra.tres" id="5_clhqu"]
+[ext_resource type="Theme" uid="uid://b0r8e35eo13uj" path="res://Scenes/temas/interfaz_ingame.tres" id="6_kjmo0"]
+[ext_resource type="TileSet" uid="uid://cfpgfgqaqn3gj" path="res://TileSet/TestGeneral.tres" id="7_l6ynl"]
+
+[node name="Nivel_tutorial" type="Node2D" unique_id=1132098404]
+
+[node name="Bordes" parent="." unique_id=1562238946 instance=ExtResource("1_y0nqj")]
+
+[node name="ContenerdorMonedas" parent="." unique_id=1832775997 instance=ExtResource("2_kjmo0")]
+
+[node name="Moneda" parent="ContenerdorMonedas" unique_id=433128947 instance=ExtResource("3_l6ynl")]
+position = Vector2(0, 62)
+
+[node name="Moneda2" parent="ContenerdorMonedas" unique_id=927808739 instance=ExtResource("3_l6ynl")]
+position = Vector2(176, 91)
+
+[node name="Personaje" parent="." unique_id=1297570945 instance=ExtResource("4_nmr1y")]
+position = Vector2(-186, 98)
+
+[node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=846171481]
+tile_map_data = PackedByteArray("AAD3/wYAAAAAAAAAAAD5/wYAAAAAAAAAAAD4/wYAAAAAAAAAAAD4/wUAAAAAAAAAAAD//wYAAAACAAEAAAAAAAYAAAACAAEAAAA=")
+tile_set = ExtResource("5_clhqu")
+
+[node name="Label" type="Label" parent="." unique_id=883761234]
+offset_left = -116.0
+offset_top = -103.0
+offset_right = 116.0
+offset_bottom = -80.0
+theme = ExtResource("6_kjmo0")
+text = "pular com a barra espaçadora"
+
+[node name="Label2" type="Label" parent="." unique_id=719141150]
+offset_left = -117.0
+offset_top = -51.0
+offset_right = 115.0
+offset_bottom = -28.0
+theme = ExtResource("6_kjmo0")
+text = "Se move com cetas do teclado"
+
+[node name="TileMapLayer2" type="TileMapLayer" parent="." unique_id=1256205769]
+tile_map_data = PackedByteArray("AAD4/wMAAAAJABkAAAD4/wIAAAAJABkAAAAGAAQAAQACAA0AAAA=")
+tile_set = ExtResource("7_l6ynl")

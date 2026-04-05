@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://dsu7b8jc5xylm"]
+
+[ext_resource type="Script" uid="uid://dpge62ud33ysn" path="res://Scenes/Niveles/escena_final.gd" id="1_6vubw"]
+
+[node name="EscenaFinal" type="Node2D" unique_id=244260775]
+script = ExtResource("1_6vubw")
+
+[node name="Label" type="Label" parent="." unique_id=1588178861]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -147.0
+offset_top = -11.5
+offset_right = 147.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "Parabens!! conseguio passar o desafio"

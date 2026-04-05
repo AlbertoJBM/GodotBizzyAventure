@@ -1,0 +1,74 @@
+[gd_scene format=3 uid="uid://bpi08breqd4jh"]
+
+[ext_resource type="Texture2D" uid="uid://47o35pl1b7ou" path="res://assets/assets/sprites/tileset_mazmorra.png" id="1_0k6g5"]
+[ext_resource type="Script" uid="uid://b11xdy057wc1h" path="res://Scenes/Monedas/moneda.gd" id="1_d80jo"]
+[ext_resource type="AudioStream" uid="uid://c31k8lrprp1m7" path="res://assets/assets/sonidos/sonido_moneda.wav" id="3_u2at8"]
+[ext_resource type="Script" uid="uid://cqhfogwrk4sx5" path="res://Scenes/Monedas/reproductor_sonido_moneda.gd" id="4_7rj52"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_d80jo"]
+atlas = ExtResource("1_0k6g5")
+region = Rect2(48, 48, 16, 16)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_u2at8"]
+radius = 9.0
+
+[sub_resource type="Animation" id="Animation_u2at8"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_d80jo"]
+resource_name = "rotar"
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5, 1),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(1, 1), Vector2(-1, 1), Vector2(1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_u2at8"]
+_data = {
+&"RESET": SubResource("Animation_u2at8"),
+&"rotar": SubResource("Animation_d80jo")
+}
+
+[node name="Moneda" type="Node2D" unique_id=433128947 node_paths=PackedStringArray("area2d", "reproductor")]
+script = ExtResource("1_d80jo")
+area2d = NodePath("Area2D")
+reproductor = NodePath("ReproductorSonidoMoneda")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1839746246]
+texture = SubResource("AtlasTexture_d80jo")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=960782583]
+collision_layer = 9
+collision_mask = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1645891229]
+shape = SubResource("CircleShape2D_u2at8")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1197611853]
+libraries/ = SubResource("AnimationLibrary_u2at8")
+autoplay = &"rotar"
+
+[node name="ReproductorSonidoMoneda" type="AudioStreamPlayer2D" parent="." unique_id=1727472185]
+stream = ExtResource("3_u2at8")
+bus = &"SFX"
+script = ExtResource("4_7rj52")

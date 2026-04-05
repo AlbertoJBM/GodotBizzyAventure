@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://cpr7537g74f54"]
+
+[ext_resource type="Script" uid="uid://3e42stog1xln" path="res://Scenes/Controlador_Partida/controlador_partida.gd" id="1_n0kce"]
+[ext_resource type="Resource" uid="uid://s7c0n1uvpt7g" path="res://Resources/partida.tres" id="2_f770k"]
+
+[node name="ControladorPartida" type="Node" unique_id=1643847001]
+script = ExtResource("1_n0kce")
+partida = ExtResource("2_f770k")
