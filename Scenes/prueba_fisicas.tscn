@@ -1,0 +1,36 @@
+[gd_scene format=3 uid="uid://bt0eniwci2ttl"]
+
+[ext_resource type="Texture2D" uid="uid://c8ue456bdvcb5" path="res://Sprites/icon.svg" id="1_j7wxn"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_dgecp"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_dgecp"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wvhpv"]
+
+[node name="PruebaFisicas" type="Node2D" unique_id=924458883]
+
+[node name="RigidBody2D" type="RigidBody2D" parent="." unique_id=1248362764]
+physics_material_override = SubResource("PhysicsMaterial_dgecp")
+
+[node name="Sprite2D" type="Sprite2D" parent="RigidBody2D" unique_id=1577317324]
+texture = ExtResource("1_j7wxn")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D" unique_id=1576409051]
+scale = Vector2(5.6000004, 5.88)
+shape = SubResource("RectangleShape2D_dgecp")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=832761623]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=1627805822]
+position = Vector2(0, 237)
+
+[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D" unique_id=1571975629]
+position = Vector2(0, 9)
+scale = Vector2(11.984374, 1)
+texture = ExtResource("1_j7wxn")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=884453733]
+position = Vector2(19, 7)
+scale = Vector2(75.36, 5.640001)
+shape = SubResource("RectangleShape2D_wvhpv")

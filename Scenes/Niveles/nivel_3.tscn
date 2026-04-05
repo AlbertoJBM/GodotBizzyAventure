@@ -1,0 +1,99 @@
+[gd_scene format=4 uid="uid://b7xmpkeaoft01"]
+
+[ext_resource type="PackedScene" uid="uid://bkiwo1p6w3hwd" path="res://Scenes/Bordes/bordes.tscn" id="1_k53gc"]
+[ext_resource type="PackedScene" uid="uid://c14mj56saa14e" path="res://Scenes/contenedor_monedas/contenerdor_monedas.tscn" id="2_4786d"]
+[ext_resource type="PackedScene" uid="uid://bpi08breqd4jh" path="res://Scenes/Monedas/moneda.tscn" id="3_4786d"]
+[ext_resource type="TileSet" uid="uid://ci6qlpm0kl3o6" path="res://TileSet/Mazmorra.tres" id="3_ir11l"]
+[ext_resource type="PackedScene" uid="uid://do2hdtr4x8mag" path="res://Scenes/Personaje/personaje.tscn" id="4_5lsik"]
+[ext_resource type="PackedScene" uid="uid://cf74gnagrotqv" path="res://Scenes/Trampas/trampa_2.tscn" id="5_caqtd"]
+[ext_resource type="Texture2D" uid="uid://47o35pl1b7ou" path="res://assets/assets/sprites/tileset_mazmorra.png" id="6_nsooa"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ndd12"]
+atlas = ExtResource("6_nsooa")
+region = Rect2(0, 0, 16, 16)
+
+[node name="Nivel_3" type="Node2D" unique_id=536839296]
+
+[node name="Bordes" parent="." unique_id=1562238946 instance=ExtResource("1_k53gc")]
+
+[node name="ContenerdorMonedas" parent="." unique_id=1832775997 instance=ExtResource("2_4786d")]
+
+[node name="Moneda" parent="ContenerdorMonedas" unique_id=433128947 instance=ExtResource("3_4786d")]
+position = Vector2(187, 92)
+
+[node name="Moneda2" parent="ContenerdorMonedas" unique_id=257888749 instance=ExtResource("3_4786d")]
+position = Vector2(189, 25)
+
+[node name="Moneda3" parent="ContenerdorMonedas" unique_id=1951953816 instance=ExtResource("3_4786d")]
+position = Vector2(190, -87)
+
+[node name="Moneda4" parent="ContenerdorMonedas" unique_id=1022385571 instance=ExtResource("3_4786d")]
+position = Vector2(-78, 43)
+
+[node name="Moneda5" parent="ContenerdorMonedas" unique_id=118810046 instance=ExtResource("3_4786d")]
+position = Vector2(-126, -18)
+
+[node name="Moneda6" parent="ContenerdorMonedas" unique_id=543127880 instance=ExtResource("3_4786d")]
+position = Vector2(-190, 45)
+
+[node name="Moneda7" parent="ContenerdorMonedas" unique_id=1705135065 instance=ExtResource("3_4786d")]
+position = Vector2(-11, -10)
+
+[node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=1582423471]
+tile_map_data = PackedByteArray("AADz//z/AAAAAAAAAAD0//z/AAAAAAAAAAD1//z/AAAAAAAAAAD2//z/AAAAAAAAAAD3//z/AAAAAAAAAAD4//z/AAAAAAAAAAD5//z/AAAAAAAAAADz//n/AAABAAIAAADz//v/AAABAAIAAADz//r/AAABAAIAAAADAAMAAAAAAAAAAAAMAAMAAAAAAAAAAAALAAMAAAAAAAAAAAADAAQAAAAAAAAAAAAEAAMAAAAAAAAAAAAAAAUAAAACAAAAAAABAAQAAAACAAAAAAD5//3/AAAAAAAAAAD5//7/AAAAAAAAAAD5////AAAAAAAAAAD5/wAAAAAAAAAAAAD5/wEAAAAAAAAAAAD5/wIAAAAAAAAAAAD5/wMAAAAAAAAAAAD5/wQAAAAAAAAAAAD6//3/AAABAAIAAAD6//7/AAABAAIAAAD6////AAABAAIAAAD8/wAAAAACAAIAAAD8/wEAAAACAAIAAAD8/wIAAAACAAIAAAD9/wQAAAAAAAAAAAD9/wMAAAAAAAAAAAD9/wIAAAAAAAAAAAD9/wEAAAAAAAAAAAD9/wAAAAAAAAAAAAD9////AAAAAAAAAAD9//7/AAAAAAAAAAD///z/AAAAAAAAAAAAAPz/AAAAAAAAAAABAPz/AAAAAAAAAAACAPz/AAAAAAAAAAADAPz/AAAAAAAAAAAEAPz/AAAAAAAAAAD4/wAAAAAAAAAAAAD3/wAAAAAAAAAAAAD0/wQAAAAAAAAAAADz/wQAAAAAAAAAAAAMAPz/AAAAAAAAAAALAPz/AAAAAAAAAAD+//3/AAAAAAAAAAD///3/AAAAAAAAAAD1/wIAAAACAAAAAAAEAAIAAAACAAEAAAD1//3/AAADAAAAAAD0//3/AAADAAAAAADz//3/AAADAAAAAAD6/wQAAAABAAIAAAD6/wMAAAABAAIAAAA=")
+tile_set = ExtResource("3_ir11l")
+
+[node name="Personaje" parent="." unique_id=1297570945 instance=ExtResource("4_5lsik")]
+position = Vector2(-178, -74)
+
+[node name="Trampas1" type="Node" parent="." unique_id=961214492]
+
+[node name="Trampa2" parent="Trampas1" unique_id=115976612 instance=ExtResource("5_caqtd")]
+position = Vector2(88, 56)
+
+[node name="Trampa3" parent="Trampas1" unique_id=1860423510 instance=ExtResource("5_caqtd")]
+position = Vector2(104, 56)
+
+[node name="Trampa4" parent="Trampas1" unique_id=659065398 instance=ExtResource("5_caqtd")]
+position = Vector2(120, 56)
+
+[node name="Trampa5" parent="Trampas1" unique_id=1178072841 instance=ExtResource("5_caqtd")]
+position = Vector2(136, 56)
+
+[node name="Trampa6" parent="Trampas1" unique_id=328186517 instance=ExtResource("5_caqtd")]
+position = Vector2(152, 56)
+
+[node name="Trampa7" parent="Trampas1" unique_id=1025702821 instance=ExtResource("5_caqtd")]
+position = Vector2(168, 56)
+
+[node name="Trampas2" type="Node" parent="." unique_id=1743670348]
+
+[node name="Trampa2" parent="Trampas2" unique_id=231629779 instance=ExtResource("5_caqtd")]
+position = Vector2(88, -56)
+
+[node name="Trampa3" parent="Trampas2" unique_id=1949168687 instance=ExtResource("5_caqtd")]
+position = Vector2(104, -56)
+
+[node name="Trampa4" parent="Trampas2" unique_id=1546557941 instance=ExtResource("5_caqtd")]
+position = Vector2(120, -56)
+
+[node name="Trampa5" parent="Trampas2" unique_id=31812175 instance=ExtResource("5_caqtd")]
+position = Vector2(136, -56)
+
+[node name="Trampa6" parent="Trampas2" unique_id=1437715954 instance=ExtResource("5_caqtd")]
+position = Vector2(152, -56)
+
+[node name="Trampa7" parent="Trampas2" unique_id=100787156 instance=ExtResource("5_caqtd")]
+position = Vector2(168, -56)
+
+[node name="ParedFalsa" type="Sprite2D" parent="." unique_id=488637003]
+modulate = Color(0.13333334, 0.13333334, 1, 1)
+z_index = 1
+position = Vector2(56, 88)
+texture = SubResource("AtlasTexture_ndd12")
+
+[node name="ParedFalsa2" type="Sprite2D" parent="." unique_id=585877040]
+modulate = Color(0.13333334, 0.13333334, 1, 1)
+z_index = 1
+position = Vector2(56, 104)
+texture = SubResource("AtlasTexture_ndd12")

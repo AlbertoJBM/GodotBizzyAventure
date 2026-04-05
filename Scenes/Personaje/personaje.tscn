@@ -1,0 +1,34 @@
+[gd_scene format=3 uid="uid://do2hdtr4x8mag"]
+
+[ext_resource type="Script" uid="uid://c385o80bhbtdu" path="res://Scenes/Personaje/personaje.gd" id="1_68jco"]
+[ext_resource type="SpriteFrames" uid="uid://cpt4fkre0df6q" path="res://Scenes/Personaje/sprite_frame_personaje.tres" id="1_lsuql"]
+[ext_resource type="Material" uid="uid://bqdm6dsdum354" path="res://Scenes/Personaje/Material_personaje_rojo.tres" id="2_ot22c"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_lsuql"]
+size = Vector2(14, 12)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_68jco"]
+size = Vector2(14, 16)
+
+[node name="Personaje" type="CharacterBody2D" unique_id=1297570945 node_paths=PackedStringArray("animacion", "area2d")]
+collision_layer = 4
+script = ExtResource("1_68jco")
+animacion = NodePath("AnimatedSprite2D")
+area2d = NodePath("Area2D")
+material_personaje_rojo = ExtResource("2_ot22c")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=834118025]
+position = Vector2(0, 1)
+shape = SubResource("RectangleShape2D_lsuql")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1803276916]
+sprite_frames = ExtResource("1_lsuql")
+animation = &"Correr"
+
+[node name="Area2D" type="Area2D" parent="." unique_id=997479715]
+collision_layer = 0
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1990140222]
+position = Vector2(0, -1)
+shape = SubResource("RectangleShape2D_68jco")
