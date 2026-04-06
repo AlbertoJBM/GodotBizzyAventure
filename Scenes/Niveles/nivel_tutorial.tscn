@@ -6,12 +6,10 @@
 [ext_resource type="PackedScene" uid="uid://do2hdtr4x8mag" path="res://Scenes/Personaje/personaje.tscn" id="4_nmr1y"]
 [ext_resource type="TileSet" uid="uid://ci6qlpm0kl3o6" path="res://TileSet/Mazmorra.tres" id="5_clhqu"]
 [ext_resource type="Theme" uid="uid://b0r8e35eo13uj" path="res://Scenes/temas/interfaz_ingame.tres" id="6_kjmo0"]
-[ext_resource type="TileSet" uid="uid://cfpgfgqaqn3gj" path="res://TileSet/TestGeneral.tres" id="7_l6ynl"]
 
 [node name="Nivel_tutorial" type="Node2D" unique_id=1132098404]
 
 [node name="Bordes" parent="." unique_id=1562238946 instance=ExtResource("1_y0nqj")]
-visible = false
 
 [node name="ContenerdorMonedas" parent="." unique_id=1832775997 instance=ExtResource("2_kjmo0")]
 
@@ -43,7 +41,3 @@ offset_right = 115.0
 offset_bottom = -28.0
 theme = ExtResource("6_kjmo0")
 text = "Se move com cetas do teclado"
-
-[node name="TileMapLayer2" type="TileMapLayer" parent="." unique_id=662482012]
-tile_map_data = PackedByteArray("AAAGAAUAAQACAA0AAAD9/wUAAAAFAAAAAAD9/wYAAAAFAAEAAAD+/wUAAAAGAAAAAAD+/wYAAAAGAAEAAAAEAAUAAQAAAAsAAAAEAAYAAQAAAAwAAAAFAAUAAQABAAsAAAA=")
-tile_set = ExtResource("7_l6ynl")
