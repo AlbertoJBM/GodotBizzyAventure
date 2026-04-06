@@ -11,6 +11,7 @@
 [node name="Nivel_tutorial" type="Node2D" unique_id=1132098404]
 
 [node name="Bordes" parent="." unique_id=1562238946 instance=ExtResource("1_y0nqj")]
+visible = false
 
 [node name="ContenerdorMonedas" parent="." unique_id=1832775997 instance=ExtResource("2_kjmo0")]
 
@@ -43,6 +44,6 @@ offset_bottom = -28.0
 theme = ExtResource("6_kjmo0")
 text = "Se move com cetas do teclado"
 
-[node name="TileMapLayer2" type="TileMapLayer" parent="." unique_id=1256205769]
-tile_map_data = PackedByteArray("AAD4/wMAAAAJABkAAAD4/wIAAAAJABkAAAAGAAQAAQACAA0AAAA=")
+[node name="TileMapLayer2" type="TileMapLayer" parent="." unique_id=662482012]
+tile_map_data = PackedByteArray("AAAGAAUAAQACAA0AAAD9/wUAAAAFAAAAAAD9/wYAAAAFAAEAAAD+/wUAAAAGAAAAAAD+/wYAAAAGAAEAAAAEAAUAAQAAAAsAAAAEAAYAAQAAAAwAAAAFAAUAAQABAAsAAAA=")
 tile_set = ExtResource("7_l6ynl")
